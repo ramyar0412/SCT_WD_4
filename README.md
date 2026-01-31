@@ -664,8 +664,7 @@ The application is production-ready, fully functional, and provides an exception
 
 ## Project Demonstration Link  
 
-[Live Demo URL Here]  
-[GitHub Repository URL Here]
+https://ramyar0412.github.io/SCT_WD_4/
 
 ---
 
