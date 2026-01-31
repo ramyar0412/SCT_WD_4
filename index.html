@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Modern To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <span class="title-icon">✓</span>
+                    TaskFlow
+                </h1>
+                <p class="app-subtitle">Organize your life</p>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-tasks">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="completed-tasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="pending-tasks">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="add-task-section">
+                <form id="task-form" class="task-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="task-input" 
+                            class="task-input" 
+                            placeholder="What needs to be done?"
+                            required
+                        >
+                        <div class="datetime-inputs">
+                            <input 
+                                type="date" 
+                                id="task-date" 
+                                class="date-input"
+                            >
+                            <input 
+                                type="time" 
+                                id="task-time" 
+                                class="time-input"
+                            >
+                        </div>
+                    </div>
+                    <button type="submit" class="add-btn">
+                        <span class="btn-icon">+</span>
+                        Add Task
+                    </button>
+                </form>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Tasks</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <button class="clear-completed" id="clear-completed">
+                    Clear Completed
+                </button>
+            </div>
+
+            <div class="tasks-container">
+                <div id="tasks-list" class="tasks-list">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <h3>No tasks yet!</h3>
+                    <p>Add your first task to get started</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
